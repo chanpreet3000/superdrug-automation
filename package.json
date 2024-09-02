@@ -1,0 +1,14 @@
+{
+  "name": "superdrug-scraper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:chanpreet3000/superdrug-scraper.git",
+  "author": "Chanpreet Singh <chanpreet3000@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "chalk": "^5.3.0",
+    "xml2js": "^0.6.2"
+  }
+}
