@@ -9,3 +9,11 @@ export const MAX_REQUEST_ATTEMPTS = 3;
 
 
 export const API_HITS_DELAY_MS = 2 * 1000; // 2 Seconds
+
+
+export const filterProductsConfig = {
+  minDiscount: 33,
+  minNumberOfReviews: 10,
+  minRating: 3.6,
+  bannedBrandNames: ['brand1', 'brand2']
+}

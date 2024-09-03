@@ -1,48 +1,61 @@
 import path from 'path';
 import {fileURLToPath} from 'url';
-import chalk from 'chalk';
+import chalk from "chalk";
+import util from "util";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class Logger {
-  static getProjectRoot() {
-    return path.resolve(__dirname, '..', '..');
-  }
+  static #projectRoot = path.resolve(__dirname, '..');
 
-  static getLogDetails() {
-    const err = new Error();
-    const stack = err.stack.split('\n')[3].trim();
-    const match = stack.match(/at (.+) \((.+):(\d+):\d+\)/) || stack.match(/at (.+):(\d+):\d+/);
-    let fileName = match[2];
-    const lineNumber = match[3];
-
-    if (fileName.startsWith('file:///')) {
-      fileName = fileURLToPath(fileName);
-    } else if (fileName.startsWith('file:/')) {
-      fileName = path.resolve(fileName.replace('file:/', ''));
+  static #getLogDetails() {
+    const stackTrace = new Error().stack.split('\n');
+    let callerLine;
+    for (let i = 2; i < stackTrace.length; i++) {
+      if (!stackTrace[i].includes('logger.js')) {
+        callerLine = stackTrace[i];
+        break;
+      }
     }
 
-    const projectRoot = Logger.getProjectRoot();
-    const relativeFileName = path.relative(projectRoot, fileName).replace(/\\/g, '/');
-    const filePathInfo = `./${relativeFileName}:${lineNumber}`;
+    const match = callerLine.match(/at (?:(.+) \()?(.+):(\d+):(\d+)/);
+    let fileName = match ? match[2] : 'unknown';
+    const lineNumber = match ? match[3] : 'unknown';
+    const columnNumber = match ? match[4] : 'unknown';
+
+    // Handle 'file:' protocol in the file path
+    if (fileName.startsWith('file:')) {
+      fileName = fileURLToPath(fileName);
+    }
+
+    let relativeFileName = path.relative(Logger.#projectRoot, fileName);
+    if (!relativeFileName.startsWith('..') && !path.isAbsolute(relativeFileName)) {
+      relativeFileName = '/' + relativeFileName;
+    }
+    relativeFileName = relativeFileName.replace(/\\/g, '/');
+
+    const filePathInfo = `.${relativeFileName}:${lineNumber}:${columnNumber}`;
 
     const timestamp = new Date().toISOString();
-    const pid = process.pid;
 
-    return {timestamp, pid, filePathInfo};
+    return {timestamp, filePathInfo};
   }
 
-  static log(message, level = 'INFO', obj = null) {
-    const {timestamp, pid, filePathInfo} = Logger.getLogDetails();
+  static #formatDetails(details) {
+    if (details === null) return 'None';
+    if (typeof details === 'object') {
+      return util.inspect(details, {depth: null, colors: true});
+    }
+    return details;
+  }
 
-    let coloredTimestamp = chalk.white(timestamp);
-    let coloredPid = chalk.blue(`PID:${pid}`);
-    let coloredFilePath = chalk.white(filePathInfo);
+  static #log(message, details, level) {
+    const {timestamp, filePathInfo} = Logger.#getLogDetails();
 
-    let coloredLogLevel;
-    let coloredMessage;
+    const coloredFilePath = chalk.white(filePathInfo);
 
+    let coloredLogLevel, coloredMessage;
     switch (level) {
       case 'DEBUG':
         coloredLogLevel = chalk.cyan(level);
@@ -69,33 +82,29 @@ class Logger {
         coloredMessage = chalk.white(message);
     }
 
-    const logMessage = `${coloredTimestamp} ${coloredPid} ${coloredLogLevel} ${coloredFilePath}  -  ${coloredMessage}`;
-
-    if (obj) {
-      console.log(logMessage, obj);
-    } else {
-      console.log(logMessage);
-    }
+    const coloredDetails = Logger.#formatDetails(details);
+    const logMessage = `${timestamp.padEnd(30)} ${coloredLogLevel.padEnd(20)} ${coloredFilePath.padEnd(60)} : ${coloredMessage} - ${coloredDetails}`;
+    console.log(logMessage);
   }
 
-  static debug(message, obj = null) {
-    Logger.log(message, 'DEBUG', obj);
+  static debug(message, details = null) {
+    Logger.#log(message, details, 'DEBUG');
   }
 
-  static info(message, obj = null) {
-    Logger.log(message, 'INFO', obj);
+  static info(message, details = null) {
+    Logger.#log(message, details, 'INFO');
   }
 
-  static warn(message, obj = null) {
-    Logger.log(message, 'WARN', obj);
+  static warn(message, details = null) {
+    Logger.#log(message, details, 'WARN');
   }
 
-  static error(message, obj = null) {
-    Logger.log(message, 'ERROR', obj);
+  static error(message, details = null) {
+    Logger.#log(message, details, 'ERROR');
   }
 
-  static critical(message, obj = null) {
-    Logger.log(message, 'CRITICAL', obj);
+  static critical(message, details = null) {
+    Logger.#log(message, details, 'CRITICAL');
   }
 }
 

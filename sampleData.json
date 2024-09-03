@@ -1,0 +1,1161 @@
+[
+  {
+    "absentInHybrisProduct": false,
+    "ageRestricted": false,
+    "allowedOnMobileApp": false,
+    "averageRating": 0.0,
+    "baseProduct": "BP_843420",
+    "categoryNameHierarchy": "Fragrance/Perfume For Women/Women’s Perfume/undefined",
+    "charity": false,
+    "code": "843420",
+    "contentUnitPrice": "£15.00 per 100ml",
+    "digitalProduct": false,
+    "discountRoundel": 21,
+    "displayOnly": false,
+    "ean": "5050456006991",
+    "egiftCard": false,
+    "engravingEnabled": false,
+    "external": false,
+    "fastlane": false,
+    "forbiddenCountries": [
+      {
+        "isocode": "IE"
+      }
+    ],
+    "gwp": false,
+    "hidePromotionsAndMarkdownPrice": false,
+    "homeDeliveryOnly": false,
+    "images": [
+      {
+        "format": "thumbnail",
+        "imageType": "PRIMARY",
+        "url": "/medias/sys_master/prd-images/hc1/ha0/11131879751710/prd-front-843420_195x195/prd-front-843420-195x195.jpg"
+      }
+    ],
+    "inStockFlag": false,
+    "inactiveInHybris": false,
+    "iomaHomeDeliveryAvailable": false,
+    "isComingSoon": false,
+    "isGiftWrapAvailable": true,
+    "isLoyaltyProduct": false,
+    "isOfflineProduct": false,
+    "isProductBundle": false,
+    "licensedType": "NORMAL",
+    "marketplaceProduct": false,
+    "masterBrand": {
+      "abrand": false,
+      "engravingEnabled": false,
+      "hideRoundel": false,
+      "limitative": false,
+      "name": "Playboy"
+    },
+    "maxOrderQuantity": 99,
+    "minOrderQuantity": 1,
+    "modifaceEnabled": false,
+    "multibuy": false,
+    "name": "Playboy Wham Glam Eau De Toilette 100ml",
+    "newIn": false,
+    "numberOfReviews": 0,
+    "otherPrices": [],
+    "pharmacy": false,
+    "potentialLoyaltyPoints": 0,
+    "price": {
+      "currencyIso": "GBP",
+      "formattedOldValue": "£19.00",
+      "formattedValue": "£15.00",
+      "isTpr": false,
+      "oldValue": 19.0,
+      "oldValueLabel": "product.pricetag.from",
+      "priceType": "BUY",
+      "savePrice": "",
+      "value": 15.0
+    },
+    "productLoyaltyPoints": 0,
+    "promotions": [
+      {
+        "promotionCategoryId": "promo_111428",
+        "promotionUrl": "/a/111428/save-on-fragrance",
+        "simplifiedTag": {
+          "label": "Save"
+        },
+        "tag": {
+          "label": "Save on Fragrance"
+        }
+      },
+      {
+        "promotionCategoryId": "promo_111719",
+        "promotionUrl": "/a/111719/20-off"
+      }
+    ],
+    "realTimeStockEnabled": true,
+    "restrictedForWishlist": false,
+    "reviewDisabled": false,
+    "reviewEnabled": true,
+    "roundelCategoryBadge": {
+      "image": {
+        "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+      }
+    },
+    "roundelCategoryBadges": [],
+    "rrpEnabled": false,
+    "showVATShip": false,
+    "stock": {
+      "stockLevelStatus": "inStock"
+    },
+    "subscription": false,
+    "supplierDescription": "SA DESIGNER PARFUMS LTD-SD003",
+    "topPromotion": {
+      "badge": {
+        "image": {
+          "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+        }
+      },
+      "reward": {}
+    },
+    "url": "/fragrance/perfume-for-women/womens-perfume/playboy-wham-glam-eau-de-toilette-100ml/p/843420",
+    "variantsNumber": 0,
+    "whiteLabelShopProduct": false
+  },
+  {
+    "absentInHybrisProduct": false,
+    "ageRestricted": false,
+    "allowedOnMobileApp": false,
+    "averageRating": 4.9,
+    "baseProduct": "BP_840282",
+    "categoryNameHierarchy": "Fragrance/Perfume For Women/Women’s Perfume/undefined",
+    "charity": false,
+    "code": "840282",
+    "contentUnitPrice": "£52.00 per 100ml",
+    "digitalProduct": false,
+    "displayOnly": false,
+    "ean": "0608940585757",
+    "egiftCard": false,
+    "engravingEnabled": false,
+    "external": false,
+    "fastlane": false,
+    "forbiddenCountries": [
+      {
+        "isocode": "IE"
+      }
+    ],
+    "gwp": false,
+    "hidePromotionsAndMarkdownPrice": false,
+    "homeDeliveryOnly": false,
+    "images": [
+      {
+        "format": "thumbnail",
+        "imageType": "PRIMARY",
+        "url": "/medias/sys_master/prd-images/hd8/he4/10712438374430/prd-front-840282_195x195/prd-front-840282-195x195.jpg"
+      }
+    ],
+    "inStockFlag": false,
+    "inactiveInHybris": false,
+    "iomaHomeDeliveryAvailable": false,
+    "isComingSoon": false,
+    "isGiftWrapAvailable": true,
+    "isLoyaltyProduct": false,
+    "isOfflineProduct": false,
+    "isProductBundle": false,
+    "licensedType": "NORMAL",
+    "marketplaceProduct": false,
+    "masterBrand": {
+      "abrand": false,
+      "engravingEnabled": false,
+      "hideRoundel": false,
+      "limitative": false,
+      "name": "BILLIE EILISH"
+    },
+    "maxOrderQuantity": 99,
+    "minOrderQuantity": 1,
+    "modifaceEnabled": false,
+    "multibuy": false,
+    "name": "Billie Eilish No. 3 EDP 100ml",
+    "newIn": false,
+    "numberOfReviews": 660,
+    "otherPrices": [],
+    "pharmacy": false,
+    "potentialLoyaltyPoints": 0,
+    "price": {
+      "currencyIso": "GBP",
+      "formattedValue": "£52.00",
+      "isTpr": false,
+      "oldValueLabel": "product.pricetag.from",
+      "priceType": "BUY",
+      "savePrice": "",
+      "value": 52.0
+    },
+    "productLoyaltyPoints": 0,
+    "promotions": [
+      {
+        "promotionCategoryId": "promo_100847",
+        "promotionUrl": "/a/100847/vip-free-next-day-delivery"
+      },
+      {
+        "promotionCategoryId": "promo_88994",
+        "promotionUrl": "/a/88994/web-next-day-o-c-express-del-to-store-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88992",
+        "promotionUrl": "/a/88992/web-members-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88990",
+        "promotionUrl": "/a/88990/web-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_108811",
+        "promotionUrl": "/a/108811/500-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91301",
+        "promotionUrl": "/a/91301/500-points"
+      },
+      {
+        "promotionCategoryId": "promo_108810",
+        "promotionUrl": "/a/108810/300-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91300",
+        "promotionUrl": "/a/91300/300-points"
+      },
+      {
+        "promotionCategoryId": "promo_91299",
+        "promotionUrl": "/a/91299/200-points"
+      },
+      {
+        "promotionCategoryId": "promo_14485",
+        "promotionUrl": "/a/14485/"
+      },
+      {
+        "promotionCategoryId": "promo_13569",
+        "promotionUrl": "/a/13569/loyalty-quadruple-points"
+      },
+      {
+        "promotionCategoryId": "promo_110871",
+        "promotionUrl": "/a/110871/web-only-triple-points-on-trending-lines"
+      },
+      {
+        "promotionCategoryId": "promo_101186",
+        "promotionUrl": "/a/101186/-"
+      },
+      {
+        "promotionCategoryId": "promo_42500",
+        "promotionUrl": "/a/42500/double-points-vip-programme"
+      },
+      {
+        "promotionCategoryId": "promo_36043",
+        "promotionUrl": "/a/36043/superdrug-mobile-double-points"
+      },
+      {
+        "promotionCategoryId": "promo_1311",
+        "promotionUrl": "/a/1311/earn-1-point-for-every-1-spent"
+      },
+      {
+        "promotionCategoryId": "promo_1310",
+        "promotionUrl": "/a/1310/"
+      },
+      {
+        "promotionCategoryId": "promo_111719",
+        "promotionUrl": "/a/111719/20-off"
+      },
+      {
+        "promotionCategoryId": "promo_89104",
+        "promotionUrl": "/a/89104/15-discount-welcome"
+      },
+      {
+        "promotionCategoryId": "promo_100848",
+        "promotionUrl": "/a/100848/vip-10-off"
+      },
+      {
+        "promotionCategoryId": "promo_95617",
+        "promotionUrl": "/a/95617/10-student-discount-online"
+      },
+      {
+        "promotionCategoryId": "promo_76308",
+        "promotionUrl": "/a/76308/three-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_74577",
+        "promotionUrl": "/a/74577/the-difference-is-you-10-off-coupon"
+      },
+      {
+        "promotionCategoryId": "promo_55735",
+        "promotionUrl": "/a/55735/greene-king-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_51226",
+        "promotionUrl": "/a/51226/10-student-discount"
+      },
+      {
+        "promotionCategoryId": "promo_1320",
+        "promotionUrl": "/a/1320/10-off-products-for-third-party-contractors"
+      },
+      {
+        "promotionCategoryId": "promo_1318",
+        "promotionUrl": "/a/1318/"
+      },
+      {
+        "promotionCategoryId": "promo_1322",
+        "promotionUrl": "/a/1322/2-off-voucher-issued-by-customer-relations"
+      },
+      {
+        "promotionCategoryId": "promo_1751",
+        "promotionUrl": "/a/1751/loyalty-point-redemption"
+      },
+      {
+        "promotionCategoryId": "promo_103387",
+        "promotionUrl": "/a/103387/-"
+      },
+      {
+        "promotionCategoryId": "promo_98427",
+        "promotionUrl": "/a/98427/tiktok-minion-promo-rid-product-fee"
+      }
+    ],
+    "rangeName": "Eilish No. 3",
+    "realTimeStockEnabled": true,
+    "restrictedForWishlist": false,
+    "reviewDisabled": false,
+    "reviewEnabled": true,
+    "roundelCategoryBadge": {
+      "image": {}
+    },
+    "roundelCategoryBadges": [],
+    "rrpEnabled": false,
+    "showVATShip": false,
+    "stock": {
+      "stockLevelStatus": "inStock"
+    },
+    "subscription": false,
+    "supplierDescription": "PHOENIX BEAUTY-PH040",
+    "topPromotion": {
+      "badge": {
+        "image": {}
+      },
+      "reward": {}
+    },
+    "url": "/fragrance/perfume-for-women/womens-perfume/billie-eilish-no-3-edp-100ml/p/840282",
+    "variantsNumber": 0,
+    "whiteLabelShopProduct": false
+  },
+  {
+    "absentInHybrisProduct": false,
+    "ageRestricted": false,
+    "allowedOnMobileApp": false,
+    "averageRating": 4.3,
+    "baseProduct": "BP_844631",
+    "categoryNameHierarchy": "Fragrance/Perfume For Women/Women’s Perfume/undefined",
+    "charity": false,
+    "code": "844631",
+    "contentUnitPrice": "£55.00 per 100ml",
+    "digitalProduct": false,
+    "displayOnly": false,
+    "ean": "4064941111719",
+    "egiftCard": false,
+    "engravingEnabled": false,
+    "external": false,
+    "fastlane": false,
+    "forbiddenCountries": [
+      {
+        "isocode": "IE"
+      }
+    ],
+    "gwp": false,
+    "hidePromotionsAndMarkdownPrice": false,
+    "homeDeliveryOnly": false,
+    "images": [
+      {
+        "format": "thumbnail",
+        "imageType": "PRIMARY",
+        "url": "/medias/sys_master/prd-images/hee/h71/11188229898270/prd-front-844631_195x195/prd-front-844631-195x195.jpg"
+      }
+    ],
+    "inStockFlag": false,
+    "inactiveInHybris": false,
+    "iomaHomeDeliveryAvailable": false,
+    "isComingSoon": false,
+    "isGiftWrapAvailable": true,
+    "isLoyaltyProduct": false,
+    "isOfflineProduct": false,
+    "isProductBundle": false,
+    "licensedType": "NORMAL",
+    "marketplaceProduct": false,
+    "masterBrand": {
+      "abrand": false,
+      "engravingEnabled": false,
+      "hideRoundel": false,
+      "limitative": false,
+      "name": "Kylie"
+    },
+    "maxOrderQuantity": 99,
+    "minOrderQuantity": 1,
+    "modifaceEnabled": false,
+    "multibuy": false,
+    "name": "Cosmic By Kylie Jenner Eau de Parfum 100ml",
+    "newIn": false,
+    "numberOfReviews": 25,
+    "otherPrices": [],
+    "pharmacy": false,
+    "potentialLoyaltyPoints": 0,
+    "price": {
+      "currencyIso": "GBP",
+      "formattedValue": "£55.00",
+      "isTpr": false,
+      "oldValueLabel": "product.pricetag.from",
+      "priceType": "BUY",
+      "savePrice": "",
+      "value": 55.0
+    },
+    "productLoyaltyPoints": 0,
+    "promotions": [
+      {
+        "promotionCategoryId": "promo_111270",
+        "promotionUrl": "/a/111270/get-a-free-kylie-cosmic-pouch-when-you-buy-selected-kylie-fragrances",
+        "simplifiedTag": {
+          "label": "Free Gift"
+        },
+        "tag": {
+          "label": "Get a FREE Kylie Cosmic pouch when you buy selected Kylie fragrances"
+        }
+      },
+      {
+        "promotionCategoryId": "promo_100847",
+        "promotionUrl": "/a/100847/vip-free-next-day-delivery"
+      },
+      {
+        "promotionCategoryId": "promo_88994",
+        "promotionUrl": "/a/88994/web-next-day-o-c-express-del-to-store-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88992",
+        "promotionUrl": "/a/88992/web-members-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88990",
+        "promotionUrl": "/a/88990/web-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_108811",
+        "promotionUrl": "/a/108811/500-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91301",
+        "promotionUrl": "/a/91301/500-points"
+      },
+      {
+        "promotionCategoryId": "promo_108810",
+        "promotionUrl": "/a/108810/300-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91300",
+        "promotionUrl": "/a/91300/300-points"
+      },
+      {
+        "promotionCategoryId": "promo_91299",
+        "promotionUrl": "/a/91299/200-points"
+      },
+      {
+        "promotionCategoryId": "promo_14485",
+        "promotionUrl": "/a/14485/"
+      },
+      {
+        "promotionCategoryId": "promo_13569",
+        "promotionUrl": "/a/13569/loyalty-quadruple-points"
+      },
+      {
+        "promotionCategoryId": "promo_101186",
+        "promotionUrl": "/a/101186/-"
+      },
+      {
+        "promotionCategoryId": "promo_42500",
+        "promotionUrl": "/a/42500/double-points-vip-programme"
+      },
+      {
+        "promotionCategoryId": "promo_36043",
+        "promotionUrl": "/a/36043/superdrug-mobile-double-points"
+      },
+      {
+        "promotionCategoryId": "promo_1311",
+        "promotionUrl": "/a/1311/earn-1-point-for-every-1-spent"
+      },
+      {
+        "promotionCategoryId": "promo_111719",
+        "promotionUrl": "/a/111719/20-off"
+      },
+      {
+        "promotionCategoryId": "promo_89104",
+        "promotionUrl": "/a/89104/15-discount-welcome"
+      },
+      {
+        "promotionCategoryId": "promo_100848",
+        "promotionUrl": "/a/100848/vip-10-off"
+      },
+      {
+        "promotionCategoryId": "promo_95617",
+        "promotionUrl": "/a/95617/10-student-discount-online"
+      },
+      {
+        "promotionCategoryId": "promo_76308",
+        "promotionUrl": "/a/76308/three-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_74577",
+        "promotionUrl": "/a/74577/the-difference-is-you-10-off-coupon"
+      },
+      {
+        "promotionCategoryId": "promo_55735",
+        "promotionUrl": "/a/55735/greene-king-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_51226",
+        "promotionUrl": "/a/51226/10-student-discount"
+      },
+      {
+        "promotionCategoryId": "promo_1320",
+        "promotionUrl": "/a/1320/10-off-products-for-third-party-contractors"
+      },
+      {
+        "promotionCategoryId": "promo_1318",
+        "promotionUrl": "/a/1318/"
+      },
+      {
+        "promotionCategoryId": "promo_1309",
+        "promotionUrl": "/a/1309/"
+      },
+      {
+        "promotionCategoryId": "promo_1322",
+        "promotionUrl": "/a/1322/2-off-voucher-issued-by-customer-relations"
+      },
+      {
+        "promotionCategoryId": "promo_1751",
+        "promotionUrl": "/a/1751/loyalty-point-redemption"
+      },
+      {
+        "promotionCategoryId": "promo_103387",
+        "promotionUrl": "/a/103387/-"
+      },
+      {
+        "promotionCategoryId": "promo_98427",
+        "promotionUrl": "/a/98427/tiktok-minion-promo-rid-product-fee"
+      }
+    ],
+    "rangeName": "Cosmic By Kylie Jenner",
+    "realTimeStockEnabled": true,
+    "restrictedForWishlist": false,
+    "reviewDisabled": false,
+    "reviewEnabled": true,
+    "roundelCategoryBadge": {
+      "image": {
+        "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+      }
+    },
+    "roundelCategoryBadges": [],
+    "rrpEnabled": false,
+    "showVATShip": false,
+    "stock": {
+      "stockLevelStatus": "inStock"
+    },
+    "subscription": false,
+    "supplierDescription": "COTY UK&I LTD (LUXURY)-XC027",
+    "topPromotion": {
+      "badge": {
+        "image": {
+          "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+        }
+      },
+      "reward": {}
+    },
+    "url": "/fragrance/perfume-for-women/womens-perfume/cosmic-by-kylie-jenner-eau-de-parfum-100ml/p/844631",
+    "variantsNumber": 0,
+    "whiteLabelShopProduct": false
+  },
+  {
+    "absentInHybrisProduct": false,
+    "ageRestricted": false,
+    "allowedOnMobileApp": false,
+    "averageRating": 0.0,
+    "baseProduct": "BP_843420",
+    "categoryNameHierarchy": "Fragrance/Perfume For Women/Women’s Perfume/undefined",
+    "charity": false,
+    "code": "843420",
+    "contentUnitPrice": "£15.00 per 100ml",
+    "digitalProduct": false,
+    "discountRoundel": 21,
+    "displayOnly": false,
+    "ean": "5050456006991",
+    "egiftCard": false,
+    "engravingEnabled": false,
+    "external": false,
+    "fastlane": false,
+    "forbiddenCountries": [
+      {
+        "isocode": "IE"
+      }
+    ],
+    "gwp": false,
+    "hidePromotionsAndMarkdownPrice": false,
+    "homeDeliveryOnly": false,
+    "images": [
+      {
+        "format": "thumbnail",
+        "imageType": "PRIMARY",
+        "url": "/medias/sys_master/prd-images/hc1/ha0/11131879751710/prd-front-843420_195x195/prd-front-843420-195x195.jpg"
+      }
+    ],
+    "inStockFlag": false,
+    "inactiveInHybris": false,
+    "iomaHomeDeliveryAvailable": false,
+    "isComingSoon": false,
+    "isGiftWrapAvailable": true,
+    "isLoyaltyProduct": false,
+    "isOfflineProduct": false,
+    "isProductBundle": false,
+    "licensedType": "NORMAL",
+    "marketplaceProduct": false,
+    "masterBrand": {
+      "abrand": false,
+      "engravingEnabled": false,
+      "hideRoundel": false,
+      "limitative": false,
+      "name": "Playboy"
+    },
+    "maxOrderQuantity": 99,
+    "minOrderQuantity": 1,
+    "modifaceEnabled": false,
+    "multibuy": false,
+    "name": "Playboy Wham Glam Eau De Toilette 100ml",
+    "newIn": false,
+    "numberOfReviews": 0,
+    "otherPrices": [],
+    "pharmacy": false,
+    "potentialLoyaltyPoints": 0,
+    "price": {
+      "currencyIso": "GBP",
+      "formattedOldValue": "£19.00",
+      "formattedValue": "£15.00",
+      "isTpr": false,
+      "oldValue": 19.0,
+      "oldValueLabel": "product.pricetag.from",
+      "priceType": "BUY",
+      "savePrice": "",
+      "value": 15.0
+    },
+    "productLoyaltyPoints": 0,
+    "promotions": [
+      {
+        "promotionCategoryId": "promo_111428",
+        "promotionUrl": "/a/111428/save-on-fragrance",
+        "simplifiedTag": {
+          "label": "Save"
+        },
+        "tag": {
+          "label": "Save on Fragrance"
+        }
+      },
+      {
+        "promotionCategoryId": "promo_111719",
+        "promotionUrl": "/a/111719/20-off"
+      }
+    ],
+    "realTimeStockEnabled": true,
+    "restrictedForWishlist": false,
+    "reviewDisabled": false,
+    "reviewEnabled": true,
+    "roundelCategoryBadge": {
+      "image": {
+        "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+      }
+    },
+    "roundelCategoryBadges": [],
+    "rrpEnabled": false,
+    "showVATShip": false,
+    "stock": {
+      "stockLevelStatus": "inStock"
+    },
+    "subscription": false,
+    "supplierDescription": "SA DESIGNER PARFUMS LTD-SD003",
+    "topPromotion": {
+      "badge": {
+        "image": {
+          "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+        }
+      },
+      "reward": {}
+    },
+    "url": "/fragrance/perfume-for-women/womens-perfume/playboy-wham-glam-eau-de-toilette-100ml/p/843420",
+    "variantsNumber": 0,
+    "whiteLabelShopProduct": false
+  },
+  {
+    "absentInHybrisProduct": false,
+    "ageRestricted": false,
+    "allowedOnMobileApp": false,
+    "averageRating": 4.6,
+    "baseProduct": "BP_774254",
+    "categoryNameHierarchy": "Fragrance/Perfume For Women/Women’s Perfume/undefined",
+    "charity": false,
+    "code": "774238",
+    "contentUnitPrice": "£70.00 per 100ml",
+    "digitalProduct": false,
+    "discountRoundel": 18,
+    "displayOnly": false,
+    "ean": "0812256023296",
+    "egiftCard": false,
+    "engravingEnabled": false,
+    "external": false,
+    "fastlane": false,
+    "forbiddenCountries": [
+      {
+        "isocode": "IE"
+      }
+    ],
+    "gwp": false,
+    "hidePromotionsAndMarkdownPrice": false,
+    "homeDeliveryOnly": false,
+    "images": [
+      {
+        "format": "thumbnail",
+        "imageType": "PRIMARY",
+        "url": "/medias/sys_master/prd-images/had/h8c/11026971066398/prd-front-774238_195x195/prd-front-774238-195x195.jpg"
+      }
+    ],
+    "inStockFlag": false,
+    "inactiveInHybris": false,
+    "iomaHomeDeliveryAvailable": false,
+    "isComingSoon": false,
+    "isGiftWrapAvailable": true,
+    "isLoyaltyProduct": false,
+    "isOfflineProduct": false,
+    "isProductBundle": false,
+    "licensedType": "NORMAL",
+    "marketplaceProduct": false,
+    "masterBrand": {
+      "abrand": false,
+      "engravingEnabled": false,
+      "hideRoundel": false,
+      "limitative": false,
+      "name": "Ariana Grande"
+    },
+    "maxOrderQuantity": 99,
+    "minOrderQuantity": 1,
+    "modifaceEnabled": false,
+    "multibuy": false,
+    "name": "Ariana Grande Cloud Eau de Parfum Spray 50ml",
+    "newIn": false,
+    "numberOfReviews": 127,
+    "otherPrices": [],
+    "pharmacy": false,
+    "potentialLoyaltyPoints": 0,
+    "price": {
+      "currencyIso": "GBP",
+      "formattedOldValue": "£43.00",
+      "formattedValue": "£35.00",
+      "isTpr": false,
+      "oldValue": 43.0,
+      "oldValueLabel": "product.pricetag.from",
+      "priceType": "BUY",
+      "savePrice": "",
+      "value": 35.0
+    },
+    "productLoyaltyPoints": 0,
+    "promotions": [
+      {
+        "promotionCategoryId": "promo_111428",
+        "promotionUrl": "/a/111428/save-on-fragrance",
+        "simplifiedTag": {
+          "label": "Save"
+        },
+        "tag": {
+          "label": "Save on Fragrance"
+        }
+      },
+      {
+        "promotionCategoryId": "promo_100847",
+        "promotionUrl": "/a/100847/vip-free-next-day-delivery"
+      },
+      {
+        "promotionCategoryId": "promo_88994",
+        "promotionUrl": "/a/88994/web-next-day-o-c-express-del-to-store-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88992",
+        "promotionUrl": "/a/88992/web-members-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88990",
+        "promotionUrl": "/a/88990/web-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_108811",
+        "promotionUrl": "/a/108811/500-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91301",
+        "promotionUrl": "/a/91301/500-points"
+      },
+      {
+        "promotionCategoryId": "promo_108810",
+        "promotionUrl": "/a/108810/300-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91300",
+        "promotionUrl": "/a/91300/300-points"
+      },
+      {
+        "promotionCategoryId": "promo_91299",
+        "promotionUrl": "/a/91299/200-points"
+      },
+      {
+        "promotionCategoryId": "promo_14485",
+        "promotionUrl": "/a/14485/"
+      },
+      {
+        "promotionCategoryId": "promo_13569",
+        "promotionUrl": "/a/13569/loyalty-quadruple-points"
+      },
+      {
+        "promotionCategoryId": "promo_110871",
+        "promotionUrl": "/a/110871/web-only-triple-points-on-trending-lines"
+      },
+      {
+        "promotionCategoryId": "promo_101186",
+        "promotionUrl": "/a/101186/-"
+      },
+      {
+        "promotionCategoryId": "promo_42500",
+        "promotionUrl": "/a/42500/double-points-vip-programme"
+      },
+      {
+        "promotionCategoryId": "promo_36043",
+        "promotionUrl": "/a/36043/superdrug-mobile-double-points"
+      },
+      {
+        "promotionCategoryId": "promo_1311",
+        "promotionUrl": "/a/1311/earn-1-point-for-every-1-spent"
+      },
+      {
+        "promotionCategoryId": "promo_74579",
+        "promotionUrl": "/a/74579/25-off"
+      },
+      {
+        "promotionCategoryId": "promo_111719",
+        "promotionUrl": "/a/111719/20-off"
+      },
+      {
+        "promotionCategoryId": "promo_89104",
+        "promotionUrl": "/a/89104/15-discount-welcome"
+      },
+      {
+        "promotionCategoryId": "promo_100848",
+        "promotionUrl": "/a/100848/vip-10-off"
+      },
+      {
+        "promotionCategoryId": "promo_95617",
+        "promotionUrl": "/a/95617/10-student-discount-online"
+      },
+      {
+        "promotionCategoryId": "promo_88986",
+        "promotionUrl": "/a/88986/ongoing-web-mo-student-10-off"
+      },
+      {
+        "promotionCategoryId": "promo_76308",
+        "promotionUrl": "/a/76308/three-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_74577",
+        "promotionUrl": "/a/74577/the-difference-is-you-10-off-coupon"
+      },
+      {
+        "promotionCategoryId": "promo_55735",
+        "promotionUrl": "/a/55735/greene-king-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_51226",
+        "promotionUrl": "/a/51226/10-student-discount"
+      },
+      {
+        "promotionCategoryId": "promo_1320",
+        "promotionUrl": "/a/1320/10-off-products-for-third-party-contractors"
+      },
+      {
+        "promotionCategoryId": "promo_1318",
+        "promotionUrl": "/a/1318/"
+      },
+      {
+        "promotionCategoryId": "promo_1309",
+        "promotionUrl": "/a/1309/"
+      },
+      {
+        "promotionCategoryId": "promo_1322",
+        "promotionUrl": "/a/1322/2-off-voucher-issued-by-customer-relations"
+      },
+      {
+        "promotionCategoryId": "promo_1751",
+        "promotionUrl": "/a/1751/loyalty-point-redemption"
+      },
+      {
+        "promotionCategoryId": "promo_103387",
+        "promotionUrl": "/a/103387/-"
+      },
+      {
+        "promotionCategoryId": "promo_98427",
+        "promotionUrl": "/a/98427/tiktok-minion-promo-rid-product-fee"
+      }
+    ],
+    "rangeName": "Ariana Grande",
+    "realTimeStockEnabled": true,
+    "restrictedForWishlist": false,
+    "reviewDisabled": false,
+    "reviewEnabled": true,
+    "roundelCategoryBadge": {
+      "image": {
+        "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+      }
+    },
+    "roundelCategoryBadges": [],
+    "rrpEnabled": false,
+    "showVATShip": false,
+    "stock": {
+      "stockLevelStatus": "inStock"
+    },
+    "subscription": false,
+    "supplierDescription": "SA DESIGNER PARFUMS LTD-SD003",
+    "topPromotion": {
+      "badge": {
+        "image": {
+          "url": "/medias/sys_master/root/h30/h8c/10566386647070/sd-offer-roundel/sd-offer-roundel.png"
+        }
+      },
+      "reward": {}
+    },
+    "url": "/fragrance/perfume-for-women/womens-perfume/ariana-grande-cloud-eau-de-parfum-spray-50ml/p/774238",
+    "variantTypeText": "+ 3 sizes",
+    "variantValueCategories": [
+      {
+        "name": "50ML"
+      }
+    ],
+    "variantsNumber": 0,
+    "whiteLabelShopProduct": false
+  },
+  {
+    "absentInHybrisProduct": false,
+    "ageRestricted": false,
+    "allowedOnMobileApp": false,
+    "averageRating": 4.6,
+    "baseProduct": "BP_827831",
+    "categoryNameHierarchy": "Fragrance/Perfume For Women/Women’s Perfume/undefined",
+    "charity": false,
+    "code": "827834",
+    "contentUnitPrice": "£110.00 per 100ml",
+    "digitalProduct": false,
+    "displayOnly": false,
+    "ean": "0810101500091",
+    "egiftCard": false,
+    "engravingEnabled": false,
+    "external": false,
+    "fastlane": false,
+    "gwp": false,
+    "hidePromotionsAndMarkdownPrice": false,
+    "homeDeliveryOnly": false,
+    "images": [
+      {
+        "format": "thumbnail",
+        "imageType": "PRIMARY",
+        "url": "/medias/sys_master/prd-images/hc7/h79/11027020152862/prd-front-827834_195x195/prd-front-827834-195x195.jpg"
+      }
+    ],
+    "inStockFlag": false,
+    "inactiveInHybris": false,
+    "iomaHomeDeliveryAvailable": false,
+    "isComingSoon": false,
+    "isGiftWrapAvailable": true,
+    "isLoyaltyProduct": false,
+    "isOfflineProduct": false,
+    "isProductBundle": false,
+    "licensedType": "NORMAL",
+    "marketplaceProduct": false,
+    "masterBrand": {
+      "abrand": false,
+      "engravingEnabled": false,
+      "hideRoundel": false,
+      "limitative": false,
+      "name": "Ariana Grande"
+    },
+    "maxOrderQuantity": 99,
+    "minOrderQuantity": 1,
+    "modifaceEnabled": false,
+    "multibuy": false,
+    "name": "Ariana Grande Mod Blush Edp Spray 30Ml",
+    "newIn": false,
+    "numberOfReviews": 53,
+    "otherPrices": [],
+    "pharmacy": false,
+    "potentialLoyaltyPoints": 0,
+    "price": {
+      "currencyIso": "GBP",
+      "formattedValue": "£33.00",
+      "isTpr": false,
+      "oldValueLabel": "product.pricetag.from",
+      "priceType": "BUY",
+      "savePrice": "",
+      "value": 33.0
+    },
+    "productLoyaltyPoints": 0,
+    "promotions": [
+      {
+        "promotionCategoryId": "promo_100847",
+        "promotionUrl": "/a/100847/vip-free-next-day-delivery"
+      },
+      {
+        "promotionCategoryId": "promo_88994",
+        "promotionUrl": "/a/88994/web-next-day-o-c-express-del-to-store-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88992",
+        "promotionUrl": "/a/88992/web-members-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_88990",
+        "promotionUrl": "/a/88990/web-standard-delivery-free-promo"
+      },
+      {
+        "promotionCategoryId": "promo_108811",
+        "promotionUrl": "/a/108811/500-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91301",
+        "promotionUrl": "/a/91301/500-points"
+      },
+      {
+        "promotionCategoryId": "promo_108810",
+        "promotionUrl": "/a/108810/300-points-wys-5"
+      },
+      {
+        "promotionCategoryId": "promo_91300",
+        "promotionUrl": "/a/91300/300-points"
+      },
+      {
+        "promotionCategoryId": "promo_91299",
+        "promotionUrl": "/a/91299/200-points"
+      },
+      {
+        "promotionCategoryId": "promo_14485",
+        "promotionUrl": "/a/14485/"
+      },
+      {
+        "promotionCategoryId": "promo_13569",
+        "promotionUrl": "/a/13569/loyalty-quadruple-points"
+      },
+      {
+        "promotionCategoryId": "promo_101186",
+        "promotionUrl": "/a/101186/-"
+      },
+      {
+        "promotionCategoryId": "promo_42500",
+        "promotionUrl": "/a/42500/double-points-vip-programme"
+      },
+      {
+        "promotionCategoryId": "promo_36043",
+        "promotionUrl": "/a/36043/superdrug-mobile-double-points"
+      },
+      {
+        "promotionCategoryId": "promo_1311",
+        "promotionUrl": "/a/1311/earn-1-point-for-every-1-spent"
+      },
+      {
+        "promotionCategoryId": "promo_111719",
+        "promotionUrl": "/a/111719/20-off"
+      },
+      {
+        "promotionCategoryId": "promo_89104",
+        "promotionUrl": "/a/89104/15-discount-welcome"
+      },
+      {
+        "promotionCategoryId": "promo_100848",
+        "promotionUrl": "/a/100848/vip-10-off"
+      },
+      {
+        "promotionCategoryId": "promo_95617",
+        "promotionUrl": "/a/95617/10-student-discount-online"
+      },
+      {
+        "promotionCategoryId": "promo_88986",
+        "promotionUrl": "/a/88986/ongoing-web-mo-student-10-off"
+      },
+      {
+        "promotionCategoryId": "promo_76308",
+        "promotionUrl": "/a/76308/three-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_74577",
+        "promotionUrl": "/a/74577/the-difference-is-you-10-off-coupon"
+      },
+      {
+        "promotionCategoryId": "promo_55735",
+        "promotionUrl": "/a/55735/greene-king-10-branded-exclusive"
+      },
+      {
+        "promotionCategoryId": "promo_51226",
+        "promotionUrl": "/a/51226/10-student-discount"
+      },
+      {
+        "promotionCategoryId": "promo_1320",
+        "promotionUrl": "/a/1320/10-off-products-for-third-party-contractors"
+      },
+      {
+        "promotionCategoryId": "promo_1318",
+        "promotionUrl": "/a/1318/"
+      },
+      {
+        "promotionCategoryId": "promo_1309",
+        "promotionUrl": "/a/1309/"
+      },
+      {
+        "promotionCategoryId": "promo_1322",
+        "promotionUrl": "/a/1322/2-off-voucher-issued-by-customer-relations"
+      },
+      {
+        "promotionCategoryId": "promo_1751",
+        "promotionUrl": "/a/1751/loyalty-point-redemption"
+      },
+      {
+        "promotionCategoryId": "promo_103387",
+        "promotionUrl": "/a/103387/-"
+      },
+      {
+        "promotionCategoryId": "promo_98427",
+        "promotionUrl": "/a/98427/tiktok-minion-promo-rid-product-fee"
+      }
+    ],
+    "realTimeStockEnabled": true,
+    "restrictedForWishlist": false,
+    "reviewDisabled": false,
+    "reviewEnabled": true,
+    "roundelCategoryBadge": {
+      "image": {}
+    },
+    "roundelCategoryBadges": [],
+    "rrpEnabled": false,
+    "showVATShip": false,
+    "stock": {
+      "stockLevelStatus": "inStock"
+    },
+    "subscription": false,
+    "supplierDescription": "SA DESIGNER PARFUMS LTD-SD003",
+    "topPromotion": {
+      "badge": {
+        "image": {}
+      },
+      "reward": {}
+    },
+    "url": "/fragrance/perfume-for-women/womens-perfume/ariana-grande-mod-blush-edp-spray-30ml/p/827834",
+    "variantTypeText": "+ 2 sizes",
+    "variantValueCategories": [
+      {
+        "name": "30ML"
+      }
+    ],
+    "variantsNumber": 0,
+    "whiteLabelShopProduct": false
+  }
+]
