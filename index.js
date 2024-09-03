@@ -1,10 +1,15 @@
 import {fetchAllPages} from './fetcher.js'
 import Logger from './logger.js'
 import {superDrugBaseUrls} from "./data.js";
+import {sendWelcomeMessageToDiscord} from "./discord.js";
 
 async function main() {
   superDrugBaseUrls.map(async (url, index) => {
     try {
+      // Send a welcome message to Discord channel
+      await sendWelcomeMessageToDiscord(url);
+
+      // Fetch data from Superdrug API
       Logger.info(`Fetching data from Superdrug API ${index + 1} of ${superDrugBaseUrls.length}`, url);
       await fetchAllPages(url);
     } catch (error) {

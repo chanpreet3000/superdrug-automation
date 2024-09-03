@@ -15,12 +15,18 @@ const getStars = (rating) => {
 };
 
 // Get the current time in the UK timezone
-const currentTimeUK = new Intl.DateTimeFormat('en-GB', {
-  timeZone: 'Europe/London',
-  hour: '2-digit',
-  minute: '2-digit',
-  second: '2-digit',
-}).format(new Date());
+const getCurrentTime = () => {
+  return new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/London',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    timeZoneName: 'short'
+  }).format(new Date());
+}
 
 const createEmbed = (product, embedColor) => ({
   title: product.name,
@@ -62,7 +68,7 @@ const createEmbed = (product, embedColor) => ({
     },
   ],
   footer: {
-    text: `🕒 Time: ${currentTimeUK} (UK)`
+    text: `🕒 Time: ${getCurrentTime()} (UK)`
   }
 });
 
@@ -79,6 +85,8 @@ export const sendProductsInfoToDiscord = async (products, embedColor, content) =
       content: i === 0 ? content : '',
       embeds: chunk.map(product => createEmbed(product, embedColor))
     };
+
+    // Send the message to Discord
     try {
       await axios.post(webhookUrl, messagePayload);
       Logger.info(`Message sent successfully (Products ${i + 1} to ${i + chunk.length})`);
@@ -89,3 +97,34 @@ export const sendProductsInfoToDiscord = async (products, embedColor, content) =
     await delay(DISCORD_API_HIT_DELAY_MS);
   }
 };
+
+export const sendWelcomeMessageToDiscord = async (scrapingUrl) => {
+  Logger.info('Sending welcome message to Discord');
+
+  const messagePayload = {
+    username: DISCORD_BOT_NAME,
+    avatar_url: DISCORD_BOT_IMAGE_URL,
+    content: `<@365538299022016512>
+
+🚀 **Scraping Process Initiated!**
+
+📅 **Timestamp:** ${getCurrentTime()}
+
+🔗 **Scraping URL:** ${scrapingUrl}
+
+I'll be sending you updates with amazing deals shortly. Stay tuned!
+
+💡 **Need help or have suggestions?**
+Feel free to contact the developer through this link: <https://chanpreet-portfolio.vercel.app/#connect>
+Happy deal hunting! 🎉`,
+  };
+
+  try {
+    await axios.post(webhookUrl, messagePayload);
+    Logger.info('Welcome message sent successfully');
+  } catch (error) {
+    Logger.error('Error sending welcome message', error);
+  }
+
+  await delay(DISCORD_API_HIT_DELAY_MS);
+}

@@ -9,7 +9,7 @@ import {
 import axios from "axios";
 import xml2js from "xml2js";
 import Logger from "./logger.js";
-import {sendProductsInfoToDiscord} from "./discord.js";
+import {sendProductsInfoToDiscord, sendWelcomeMessageToDiscord} from "./discord.js";
 
 
 async function fetchXML(url, headers) {
@@ -106,7 +106,7 @@ export async function fetchAllPages(baseUrl) {
     // Update the current page and wait for the next request
     currentPage++;
     if (currentPage < totalPages) await delay(SUPERDRUG_API_HITS_DELAY_MS);
-  } while (currentPage < 2);
+  } while (currentPage < totalPages);
 
   // Get unique brands
   const brandSet = new Set();
