@@ -31,7 +31,7 @@ export const discordMessagesConfig = [
     minDiscount: 40,
     maxDiscount: 60,
     content: '**🔥 Hot Deals!**\nSave **40% - 60%** on top brands. Limited-time offers on some of your favorite products. Act fast before they’re gone!',
-    embedColor: 0xffa500, // Orange for attention
+    embedColor: 0xff8000, // Orange for attention
   },
   {
     minDiscount: 33,
