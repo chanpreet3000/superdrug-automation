@@ -28,49 +28,62 @@ const getCurrentTime = () => {
   }).format(new Date());
 }
 
-const createEmbed = (product, embedColor) => ({
-  title: product.name,
-  url: product.website_url,
-  thumbnail: {
-    url: product.imageUrl,
-  },
-  color: embedColor,
-  fields: [
-    {
-      name: 'Price',
-      value: `~~${product.price.oldFormattedPrice}~~  **${product.price.newFormattedPrice}**`,
-      inline: true,
+const createEmbed = (product, embedColor) => {
+  const embed = {
+    title: product.name,
+    url: product.website_url,
+    thumbnail: {
+      url: product.imageUrl,
     },
-    {
-      name: 'Discount',
-      value: `**${product.price.discount}%** Off!`,
-      inline: true,
-    },
-    {
-      name: 'Rating',
-      value: `${getStars(product.averageRating)} ${product.averageRating}\n(${product.numberOfReviews} reviews)`,
-      inline: true,
-    },
-    {
-      name: 'Brand',
-      value: `${product.masterBrand}`,
-      inline: true,
-    },
-    {
-      name: 'Unit Price',
-      value: product.contentUnitPrice,
-      inline: true,
-    },
-    {
-      name: 'Stock Status',
-      value: product.isInStock ? 'In Stock' : '~~Out of Stock~~',
-      inline: true,
-    },
-  ],
-  footer: {
-    text: `🕒 Time: ${getCurrentTime()} (UK)`
+    color: embedColor,
+    fields: [
+      {
+        name: 'Price',
+        value: `~~${product.price.oldFormattedPrice}~~  **${product.price.newFormattedPrice}**`,
+        inline: true,
+      },
+      {
+        name: 'Discount',
+        value: `**${product.price.discount}%** Off!`,
+        inline: true,
+      },
+      {
+        name: 'Rating',
+        value: `${getStars(product.averageRating)} ${product.averageRating}\n(${product.numberOfReviews} reviews)`,
+        inline: true,
+      },
+      {
+        name: 'Brand',
+        value: `${product.masterBrand}`,
+        inline: true,
+      },
+      {
+        name: 'Unit Price',
+        value: product.contentUnitPrice,
+        inline: true,
+      },
+      {
+        name: 'Stock Status',
+        value: product.isInStock ? 'In Stock' : '~~Out of Stock~~',
+        inline: true,
+      },
+    ],
+    footer: {
+      text: `🕒 Time: ${getCurrentTime()} (UK)`
+    }
+  };
+
+  // Add promotions field if promotions exist
+  if (product.promotions && product.promotions.length > 0) {
+    embed.fields.push({
+      name: 'Promotions',
+      value: product.promotions.map(promo => `• ${promo}`).join('\n'),
+      inline: false
+    });
   }
-});
+
+  return embed;
+};
 
 export const sendProductsInfoToDiscord = async (products, embedColor, content) => {
   Logger.info('Sending products info to Discord', {products: products, embedColor, content});

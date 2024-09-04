@@ -9,7 +9,7 @@ import {
 import axios from "axios";
 import xml2js from "xml2js";
 import Logger from "./logger.js";
-import {sendProductsInfoToDiscord, sendWelcomeMessageToDiscord} from "./discord.js";
+import {sendProductsInfoToDiscord} from "./discord.js";
 
 
 async function fetchXML(url, headers) {
@@ -43,6 +43,12 @@ const transformProducts = (products) => {
       url,
     } = product;
 
+    let transformedPromotions = [];
+    try {
+      transformedPromotions = promotions ? promotions.filter(promotion => promotion.tag).map(promotion => promotion.tag.label) : [];
+    } catch (_) {
+    }
+
     const oldFormattedPrice = price.formattedOldValue || price.formattedValue;
     const newFormattedPrice = price.formattedValue;
     const oldPrice = price.oldValue || price.value;
@@ -65,8 +71,9 @@ const transformProducts = (products) => {
       "masterBrand": masterBrand.name,
       "name": name,
       "numberOfReviews": numberOfReviews,
-      "price": priceObj, // "promotions": promotions,
+      "price": priceObj,
       "isInStock": stock.stockLevelStatus === 'inStock',
+      'promotions': transformedPromotions,
       "website_url": `https://www.superdrug.com${url}`,
     }
   });
