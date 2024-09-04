@@ -1,5 +1,5 @@
 import axios from "axios";
-import {DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME} from "./data.js";
+import {DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME, DISCORD_ROLE_ID} from "./data.js";
 import {delay} from "./utils.js";
 import Logger from "./logger.js";
 import dotenv from "dotenv";
@@ -117,7 +117,7 @@ export const sendWelcomeMessageToDiscord = async (scrapingUrl) => {
   const messagePayload = {
     username: DISCORD_BOT_NAME,
     avatar_url: DISCORD_BOT_IMAGE_URL,
-    content: `<@365538299022016512>
+    content: `<@${DISCORD_ROLE_ID}>
 
 🚀 **Scraping Process Initiated!**
 
