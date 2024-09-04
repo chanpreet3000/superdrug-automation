@@ -6,18 +6,23 @@ import {
   SUPERDRUG_MAX_REQUEST_ATTEMPTS,
   SUPERDRUG_RTE_DELAY_MS
 } from "./data.js";
-import axios from "axios";
 import xml2js from "xml2js";
 import Logger from "./logger.js";
 import {sendProductsInfoToDiscord} from "./discord.js";
+import puppeteer from "puppeteer";
 
 
-async function fetchXML(url, headers) {
+async function fetchXML(browser, url) {
+  const page = await browser.newPage();
+
   for (let i = 0; i < SUPERDRUG_MAX_REQUEST_ATTEMPTS; i++) {
     try {
-      const {data} = await axios.get(url, {headers});
+      await page.setExtraHTTPHeaders(headers);
+      await page.goto(url, {waitUntil: 'networkidle0'});
+      const content = await page.content();
       const parser = new xml2js.Parser({explicitArray: false, mergeAttrs: true});
-      return await parser.parseStringPromise(data);
+      const jsonData = await parser.parseStringPromise(content);
+      return jsonData['html']['body']['div'][0];
     } catch (error) {
       Logger.error(`Attempt ${i + 1} to fetch ${url} failed`, error);
       if (i === SUPERDRUG_MAX_REQUEST_ATTEMPTS - 1) throw error;
@@ -94,10 +99,11 @@ export async function fetchAllPages(baseUrl) {
   let totalPages;
   const allProducts = []
   Logger.info(`Fetching data from page=${currentPage}`);
+  const browser = await puppeteer.launch({headless: true});
 
   do {
     const url = `${baseUrl}&currentPage=${currentPage}`;
-    const result = await fetchXML(url, headers);
+    const result = await fetchXML(browser, url);
     const pageData = result['productCategorySearchPage'];
     const products = pageData['products'];
     totalPages = pageData['pagination']['totalPages'];
@@ -114,6 +120,7 @@ export async function fetchAllPages(baseUrl) {
     currentPage++;
     if (currentPage < totalPages) await delay(SUPERDRUG_API_HITS_DELAY_MS);
   } while (currentPage < totalPages);
+  await browser.close();
 
   // Get unique brands
   const brandSet = new Set();
