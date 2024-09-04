@@ -6,7 +6,7 @@ export const SUPERDRUG_RTE_DELAY_MS = 30 * 1000; // 30 Seconds
 
 export const SUPERDRUG_MAX_REQUEST_ATTEMPTS = 3;
 
-export const SUPERDRUG_API_HITS_DELAY_MS = 2 * 1000; // 2 Seconds
+export const SUPERDRUG_API_HITS_DELAY_MS = 1; // 1 Seconds
 
 export const filterProductsConfig = {
   minNumberOfReviews: 10,
