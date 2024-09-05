@@ -4,7 +4,7 @@ import {superDrugBaseUrls} from "./data.js";
 import {sendWelcomeMessageToDiscord} from "./discord.js";
 
 async function main() {
-  superDrugBaseUrls.map(async (url, index) => {
+  for (const [index, url] of superDrugBaseUrls.entries()) {
     try {
       // Send a welcome message to Discord channel
       await sendWelcomeMessageToDiscord(url);
@@ -17,7 +17,7 @@ async function main() {
     } finally {
       Logger.info(`Finished fetching data from Superdrug API ${index + 1} of ${superDrugBaseUrls.length}`, url);
     }
-  })
+  }
 }
 
 try {

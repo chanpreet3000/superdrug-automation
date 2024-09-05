@@ -2,7 +2,8 @@
  * Below are the configurations for the SuperDrug Bot, Change the values as per your requirements
  */
 export const superDrugBaseUrls = [
-  'https://api.superdrug.com/api/v2/sd/search?fields=PLP&categoryCode=fragranceforher&lang=en_GB&curr=GBP&pageSize=200'
+  'https://api.superdrug.com/api/v2/sd/search?fields=PLP&categoryCode=fragranceforher&lang=en_GB&curr=GBP&pageSize=200',
+  'https://api.superdrug.com/api/v2/sd/search?fields=PLP&query=%3Aranking%3AmarketplaceProduct%3Afalse&categoryCode=fragranceforhim&lang=en_GB&curr=GBP&pageSize=200'
 ];
 
 export const filterProductsConfig = {
