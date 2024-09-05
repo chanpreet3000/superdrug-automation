@@ -2,6 +2,7 @@ import {fetchAllPages} from './fetcher.js'
 import Logger from './logger.js'
 import {superDrugBaseUrls} from "./data.js";
 import {sendWelcomeMessageToDiscord} from "./discord.js";
+import cron from 'node-cron';
 
 async function main() {
   for (const [index, url] of superDrugBaseUrls.entries()) {
@@ -20,8 +21,21 @@ async function main() {
   }
 }
 
-try {
-  main()
-} catch (error) {
-  Logger.critical('Something went wrong!', error);
-}
+// Schedule the main function to run at 1 AM, 10 AM, and 5 PM GMT
+cron.schedule('0 1 * * *', () => {
+  Logger.info('Running the script at 1 AM GMT');
+  main();
+});
+
+cron.schedule('0 10 * * *', () => {
+  Logger.info('Running the script at 10 AM GMT');
+  main();
+});
+
+cron.schedule('0 17 * * *', () => {
+  Logger.info('Running the script at 5 PM GMT');
+  main();
+});
+
+// Start immediately if you want to run it now as well
+main();
