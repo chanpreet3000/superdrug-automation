@@ -8,12 +8,6 @@ dotenv.config();
 
 const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
-const getStars = (rating) => {
-  const fullStars = Math.floor(parseFloat(rating));
-  const emptyStars = 5 - fullStars;
-  return '★'.repeat(fullStars) + '☆'.repeat(emptyStars);
-};
-
 // Get the current time in the UK timezone
 const getCurrentTime = () => {
   return new Intl.DateTimeFormat('en-GB', {
@@ -29,7 +23,7 @@ const getCurrentTime = () => {
 }
 
 const createEmbed = (product, embedColor) => {
-  const discountFromPreviousScan = ((product.latestPrice - product.price.newPrice) / product.latestPrice) * 100;
+  const discountFromPreviousScan = (((product.latestPrice - product.price.newPrice) / product.latestPrice) * 100).toFixed(2);
   const embed = {
     title: product.name,
     url: product.website_url,
@@ -66,16 +60,6 @@ const createEmbed = (product, embedColor) => {
       {
         name: 'Brand',
         value: `${product.masterBrand}`,
-        inline: true,
-      },
-      {
-        name: 'Rating',
-        value: `${getStars(product.averageRating)} ${product.averageRating}\n(${product.numberOfReviews} reviews)`,
-        inline: true,
-      },
-      {
-        name: 'Unit Price',
-        value: product.contentUnitPrice,
         inline: true,
       },
     ],
