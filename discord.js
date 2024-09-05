@@ -33,8 +33,8 @@ const createEmbed = (product, embedColor) => {
     color: embedColor,
     fields: [
       {
-        name: 'Price',
-        value: `~~${product.price.oldFormattedPrice}~~  **${product.price.newFormattedPrice}**`,
+        name: 'Current Price',
+        value: `${product.price.newFormattedPrice}`,
         inline: true,
       },
       {
@@ -49,12 +49,12 @@ const createEmbed = (product, embedColor) => {
       },
       {
         name: 'Overall Discount',
-        value: `**${product.price.discount}%** Off!`,
+        value: `${product.price.discount}% Off!`,
         inline: true,
       },
       {
         name: 'Discount From Previous Scan',
-        value: `**${discountFromPreviousScan}%** Off!`,
+        value: `${discountFromPreviousScan}% Off!`,
         inline: true,
       },
       {
