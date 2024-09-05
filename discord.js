@@ -1,5 +1,5 @@
 import axios from "axios";
-import {DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME, DISCORD_ROLE_ID} from "./data.js";
+import {DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME} from "./data.js";
 import {delay} from "./utils.js";
 import Logger from "./logger.js";
 import dotenv from "dotenv";
@@ -29,6 +29,7 @@ const getCurrentTime = () => {
 }
 
 const createEmbed = (product, embedColor) => {
+  const discountFromPreviousScan = ((product.latestPrice - product.price.newPrice) / product.latestPrice) * 100;
   const embed = {
     title: product.name,
     url: product.website_url,
@@ -43,13 +44,23 @@ const createEmbed = (product, embedColor) => {
         inline: true,
       },
       {
-        name: 'Discount',
+        name: 'Previous Scan Price',
+        value: `${product.latestFormattedPrice}`,
+        inline: true,
+      },
+      {
+        name: 'EAN',
+        value: `${product.ean}`,
+        inline: true,
+      },
+      {
+        name: 'Overall Discount',
         value: `**${product.price.discount}%** Off!`,
         inline: true,
       },
       {
-        name: 'Rating',
-        value: `${getStars(product.averageRating)} ${product.averageRating}\n(${product.numberOfReviews} reviews)`,
+        name: 'Discount From Previous Scan',
+        value: `**${discountFromPreviousScan}%** Off!`,
         inline: true,
       },
       {
@@ -58,13 +69,13 @@ const createEmbed = (product, embedColor) => {
         inline: true,
       },
       {
-        name: 'Unit Price',
-        value: product.contentUnitPrice,
+        name: 'Rating',
+        value: `${getStars(product.averageRating)} ${product.averageRating}\n(${product.numberOfReviews} reviews)`,
         inline: true,
       },
       {
-        name: 'Stock Status',
-        value: product.isInStock ? 'In Stock' : '~~Out of Stock~~',
+        name: 'Unit Price',
+        value: product.contentUnitPrice,
         inline: true,
       },
     ],
@@ -101,7 +112,7 @@ export const sendProductsInfoToDiscord = async (products, embedColor, content) =
 
     // Send the message to Discord
     try {
-      await axios.post(webhookUrl, messagePayload);
+      await sendMessageToDiscord(messagePayload);
       Logger.info(`Message sent successfully (Products ${i + 1} to ${i + chunk.length})`);
     } catch (error) {
       Logger.error(`Error sending message (Products ${i + 1} to ${i + chunk.length})`, error);
@@ -112,32 +123,45 @@ export const sendProductsInfoToDiscord = async (products, embedColor, content) =
 };
 
 export const sendWelcomeMessageToDiscord = async (scrapingUrl) => {
-  Logger.info('Sending welcome message to Discord');
 
   const messagePayload = {
     username: DISCORD_BOT_NAME,
     avatar_url: DISCORD_BOT_IMAGE_URL,
-    content: `<@${DISCORD_ROLE_ID}>
-
-🚀 **Scraping Process Initiated!**
-
-📅 **Timestamp:** ${getCurrentTime()}
-
-🔗 **Scraping URL:** ${scrapingUrl}
-
-I'll be sending you updates with amazing deals shortly. Stay tuned!
-
-💡 **Need help or have suggestions?**
-Feel free to contact the developer through this link: <https://chanpreet-portfolio.vercel.app/#connect>
-Happy deal hunting! 🎉`,
+    embeds: [
+      {
+        color: 0x0099FF, // Blue color
+        title: '🚀 Scraping Process Initiated!',
+        description: "I'll be sending you updates with amazing deals shortly. [Contact the developer](https://chanpreet-portfolio.vercel.app/#connect)",
+        fields: [
+          {
+            name: '📅 Timestamp',
+            value: getCurrentTime(),
+            inline: true
+          },
+          {
+            name: '🔗 Scraping URL',
+            value: scrapingUrl,
+            inline: true
+          }
+        ],
+        footer: {
+          text: 'Scraping in progress... '
+        }
+      }
+    ]
   };
 
   try {
-    await axios.post(webhookUrl, messagePayload);
+    Logger.info('Sending welcome message to Discord');
+    await sendMessageToDiscord(messagePayload);
     Logger.info('Welcome message sent successfully');
   } catch (error) {
     Logger.error('Error sending welcome message', error);
   }
 
   await delay(DISCORD_API_HIT_DELAY_MS);
+}
+
+export const sendMessageToDiscord = async (messagePayload) => {
+  await axios.post(webhookUrl, messagePayload);
 }

@@ -6,31 +6,10 @@ export const superDrugBaseUrls = [
 ];
 
 export const filterProductsConfig = {
-  minNumberOfReviews: 10,
-  minRating: 3.6,
+  minNumberOfReviews: 0,
+  minRating: 0,
   bannedBrandNames: ['brand1', 'brand2']
 }
-
-export const discordMessagesConfig = [
-  {
-    minDiscount: 60,
-    maxDiscount: 100,
-    content: '**🚨 Massive Sale Alert!**\nGet **60% - 100%** off on select items! This is your chance to grab premium products at unbeatable prices. Don’t miss out!',
-    embedColor: 0xff0000, // Red for urgency
-  },
-  {
-    minDiscount: 40,
-    maxDiscount: 60,
-    content: '**🔥 Hot Deals!**\nSave **40% - 60%** on top brands. Limited-time offers on some of your favorite products. Act fast before they’re gone!',
-    embedColor: 0xff8000, // Orange for attention
-  },
-  {
-    minDiscount: 33,
-    maxDiscount: 40,
-    content: '**💥 Great Savings!**\nEnjoy **33% - 40%** off. Quality products at discounted prices just for you. Hurry, these deals won’t last long!',
-    embedColor: 0xffff00, // Yellow for optimism
-  },
-];
 
 export const DISCORD_ROLE_ID = '365538299022016512';
 
