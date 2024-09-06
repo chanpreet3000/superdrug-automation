@@ -1,15 +1,9 @@
 import requests
 from datetime import datetime
 import pytz
-from data import DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME
+from data import DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME, DISCORD_WEBHOOK_URL
 from utils import delay
 from logger import Logger
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-webhook_url = os.getenv('DISCORD_WEBHOOK_URL')
 
 
 def get_current_time():
@@ -134,5 +128,5 @@ async def send_welcome_message_to_discord(scraping_url):
 
 
 async def send_message_to_discord(message_payload):
-    response = requests.post(webhook_url, json=message_payload)
+    response = requests.post(DISCORD_WEBHOOK_URL, json=message_payload)
     response.raise_for_status()

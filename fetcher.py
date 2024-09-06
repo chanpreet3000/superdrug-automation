@@ -11,11 +11,7 @@ from data import (
 )
 from logger import Logger
 from discord import send_message_to_discord, send_products_info_to_discord
-import os
 from data_manager import DataManager
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 async def fetch_xml(url):
