@@ -10,16 +10,17 @@ from datetime import datetime
 
 
 async def startBot():
+    # Log current time before starting the bot
+    current_time = datetime.now().isoformat()
+    Logger.warn(f"Current time before starting the bot: {current_time}")
+
     for index, url in enumerate(super_drug_base_urls):
-        # Log current time before starting the bot
-        current_time = datetime.now().isoformat()
-        Logger.warn(f"Current time before starting the bot: {current_time}")
         try:
             # Send a welcome message to Discord channel
             await send_welcome_message_to_discord(url)
 
             # Fetch data from Superdrug API
-            Logger.info(f"Fetching data from Superdrug API {index + 1} of {len(super_drug_base_urls)}", url)
+            Logger.warn(f"Fetching data from Superdrug API {index + 1} of {len(super_drug_base_urls)}", url)
             await fetch_all_pages(url)
         except Exception as error:
             traceback.print_exc()

@@ -107,7 +107,7 @@ async def fetch_all_pages(base_url):
         products = result['products']
         total_pages = result['pagination']['totalPages']
 
-        Logger.info(f"Data Fetched from Page no {current_page}/{total_pages}")
+        Logger.info(f"Data Fetched from Page no {current_page + 1}/{total_pages}")
 
         transformed_products = transform_products(products)
         all_products.extend(transformed_products)
@@ -130,8 +130,6 @@ async def fetch_all_pages(base_url):
         is_new_product = not data_manager.get_value(product['code'])
         transformed_products.append({**product, 'latestPrice': latest_price, 'isNewProduct': is_new_product,
                                      'latestFormattedPrice': latest_formatted_price})
-
-    Logger.info("Data After Filtering & Transformation", transformed_products)
 
     Logger.info('Saving the latest prices to the data store')
     key_value_pairs = [(product['code'], product['price']['newPrice']) for product in transformed_products]

@@ -40,7 +40,7 @@ class Logger:
         timestamp, pid, file_path_info = Logger.__get_log_details()
 
         # Color the timestamp white
-        colored_timestamp = f"{Fore.WHITE}{timestamp:<30}"
+        colored_timestamp = f"{Fore.LIGHTWHITE_EX}{timestamp:<30}"
 
         # Color the log level according to its severity
         if level == logging.DEBUG:
@@ -60,7 +60,7 @@ class Logger:
             colored_message = f"{Fore.MAGENTA}{message:<60}"
 
         # Color the PID blue
-        colored_pid = f"{Fore.BLUE}PID:{pid:<7}"
+        # colored_pid = f"{Fore.BLUE}PID:{pid:<7}"
 
         # Color the file path white
         colored_file_path = f"{Fore.WHITE}{file_path_info:<60}"
@@ -68,7 +68,7 @@ class Logger:
         # Color the details bright white
         colored_details = f"{Fore.LIGHTWHITE_EX}{details}"
 
-        log_message = f"{colored_timestamp} {colored_pid} {colored_log_level} {colored_file_path} : {colored_message}  -  {colored_details}"
+        log_message = f"{colored_timestamp} {colored_log_level} {colored_file_path} : {colored_message}  -  {colored_details}"
 
         if level == logging.DEBUG:
             Logger.__logger.debug(log_message)
