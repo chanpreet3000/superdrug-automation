@@ -33,15 +33,15 @@ async def startBot():
 
 
 if __name__ == "__main__":
-    # Start as soon as the code starts
-    asyncio.run(startBot())
-
     scheduler = AsyncIOScheduler()
 
     # Add cron jobs
     scheduler.add_job(startBot, 'cron', hour='1', timezone='GMT')
     scheduler.add_job(startBot, 'cron', hour='10', timezone='GMT')
     scheduler.add_job(startBot, 'cron', hour='17', timezone='GMT')
+
+    # Run startBot immediately when the script starts
+    scheduler.add_job(startBot)
 
     # Start the scheduler
     scheduler.start()
