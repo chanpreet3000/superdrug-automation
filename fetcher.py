@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-send_discord_notifications = os.getenv('SEND_DISCORD_NOTIFICATION') == 'true'
+send_discord_notifications = os.getenv('SEND_DISCORD_NOTIFICATION') == 'True'
 
 
 async def fetch_xml(url):
@@ -54,10 +54,22 @@ def transform_products(products):
         except:
             pass
 
+        def get_min_price():
+            prices = [product['price']['value']]
+            if 'otherPrices' in product:
+                prices.extend([p['value'] for p in product['otherPrices']])
+            return min(prices)
+
+        def get_min_formatted_price():
+            prices = [(product['price']['value'], product['price']['formattedValue'])]
+            if 'otherPrices' in product:
+                prices.extend([(p['value'], p['formattedValue']) for p in product['otherPrices']])
+            return min(prices, key=lambda x: x[0])[1]
+
         old_formatted_price = product['price'].get('formattedOldValue') or product['price']['formattedValue']
-        new_formatted_price = product['price']['formattedValue']
+        new_formatted_price = get_min_formatted_price()
         old_price = product['price'].get('oldValue') or product['price']['value']
-        new_price = product['price']['value']
+        new_price = get_min_price()
         discount = ((old_price - new_price) / old_price) * 100 if old_price > new_price else 0
 
         price_obj = {
