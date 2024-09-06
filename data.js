@@ -12,7 +12,7 @@ export const filterProductsConfig = {
   bannedBrandNames: ['brand1', 'brand2']
 }
 
-export const DISCORD_ROLE_ID = '365538299022016512';
+export const DISCORD_ROLE_ID = '663796251212644358';
 
 
 /**
