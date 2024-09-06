@@ -31,7 +31,7 @@ export const SUPERDRUG_RTE_DELAY_MS = 30 * 1000; // 30 Seconds
 
 export const SUPERDRUG_MAX_REQUEST_ATTEMPTS = 3;
 
-export const SUPERDRUG_API_HITS_DELAY_MS = 1; // 1 Seconds
+export const SUPERDRUG_API_HITS_DELAY_MS = 3; // 3 Seconds
 
 
 export const DISCORD_BOT_NAME = 'SuperDrug Bot';

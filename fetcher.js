@@ -9,7 +9,11 @@ import axios from "axios";
 import Logger from "./logger.js";
 import {sendMessageToDiscord, sendProductsInfoToDiscord} from "./discord.js";
 import {DataManager} from "./DataManager.js";
+import dotenv from "dotenv";
 
+dotenv.config();
+
+const sendDiscordNotifications = process.env.SEND_DISCORD_NOTIFICATION === 'true';
 
 async function fetchXML(url, headers) {
   for (let i = 0; i < SUPERDRUG_MAX_REQUEST_ATTEMPTS; i++) {
@@ -133,6 +137,7 @@ export async function fetchAllPages(baseUrl) {
   await dataManager.setMultipleValues(keyValuePairs);
   Logger.info('Data saved successfully');
 
+  if (!sendDiscordNotifications) return;
   // Send the products to discord
   const productsWithPriceDrop = transformedProducts.filter(product => product.price.newPrice < product.latestPrice);
   const productsThatAreNew = transformedProducts.filter(product => product.isNewProduct);
