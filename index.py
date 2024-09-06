@@ -33,6 +33,9 @@ async def startBot():
 
 
 if __name__ == "__main__":
+    # Start as soon as the code starts
+    asyncio.run(startBot())
+
     scheduler = AsyncIOScheduler()
 
     # Add cron jobs
