@@ -3,12 +3,11 @@ import traceback
 import requests
 from utils import delay
 from data import (
-    SUPERDRUG_API_HITS_DELAY_MS,
     SUPERDRUG_MAX_REQUEST_ATTEMPTS,
     SUPERDRUG_RTE_DELAY_MS,
     DISCORD_ROLE_ID
 )
-from config import FILTER_PRODUCTS_CONFIG
+from config import FILTER_PRODUCTS_CONFIG, SUPERDRUG_API_HITS_DELAY_MS
 from logger import Logger
 from discord import send_message_to_discord, send_products_info_to_discord
 from data_manager import DataManager

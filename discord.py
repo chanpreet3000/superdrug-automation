@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 import pytz
 from data import DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME
-from config import DISCORD_WEBHOOK_URL
+from config import DISCORD_WEBHOOK_URL, SEND_DISCORD_MESSAGES
 from utils import delay
 from logger import Logger
 
@@ -129,5 +129,8 @@ async def send_welcome_message_to_discord(scraping_url):
 
 
 async def send_message_to_discord(message_payload):
+    if not SEND_DISCORD_MESSAGES:
+        Logger.debug('Discord messages are disabled. Skipping sending the message')
+        return
     response = requests.post(DISCORD_WEBHOOK_URL, json=message_payload)
     response.raise_for_status()
