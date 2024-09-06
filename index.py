@@ -29,10 +29,22 @@ async def startBot():
         finally:
             Logger.info(f"Finished fetching data from Superdrug API {index + 1} of {len(super_drug_base_urls)}", url)
 
+    Logger.debug('Sleeping till next cron job')
+
 
 if __name__ == "__main__":
-    asyncio.run(startBot())
     scheduler = AsyncIOScheduler()
+
+    # Add cron jobs
     scheduler.add_job(startBot, 'cron', hour='1', timezone='GMT')
     scheduler.add_job(startBot, 'cron', hour='10', timezone='GMT')
     scheduler.add_job(startBot, 'cron', hour='17', timezone='GMT')
+
+    # Start the scheduler
+    scheduler.start()
+
+    # Keep the event loop running
+    try:
+        asyncio.get_event_loop().run_forever()
+    except (KeyboardInterrupt, SystemExit):
+        pass
