@@ -17,8 +17,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-send_discord_notifications = os.getenv('SEND_DISCORD_NOTIFICATION') == 'True'
-
 
 async def fetch_xml(url):
     for i in range(SUPERDRUG_MAX_REQUEST_ATTEMPTS):
@@ -147,9 +145,6 @@ async def fetch_all_pages(base_url):
     key_value_pairs = [(product['code'], product['price']['newPrice']) for product in transformed_products]
     data_manager.set_multiple_values(key_value_pairs)
     Logger.info('Data saved successfully')
-
-    if not send_discord_notifications:
-        return
 
     products_with_price_drop = [product for product in transformed_products if
                                 product['price']['newPrice'] < product['latestPrice']]
