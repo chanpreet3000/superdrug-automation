@@ -1,7 +1,8 @@
 import requests
 from datetime import datetime
 import pytz
-from data import DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME, DISCORD_WEBHOOK_URL
+from data import DISCORD_API_HIT_DELAY_MS, DISCORD_BOT_IMAGE_URL, DISCORD_BOT_NAME
+from config import DISCORD_WEBHOOK_URL
 from utils import delay
 from logger import Logger
 

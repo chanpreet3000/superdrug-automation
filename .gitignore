@@ -1,4 +1,4 @@
-.env
 latest_price_db.json
 .venv
 __pycache__
+config.py

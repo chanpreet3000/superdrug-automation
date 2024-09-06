@@ -4,11 +4,11 @@ import requests
 from utils import delay
 from data import (
     SUPERDRUG_API_HITS_DELAY_MS,
-    filter_products_config,
     SUPERDRUG_MAX_REQUEST_ATTEMPTS,
     SUPERDRUG_RTE_DELAY_MS,
     DISCORD_ROLE_ID
 )
+from config import FILTER_PRODUCTS_CONFIG
 from logger import Logger
 from discord import send_message_to_discord, send_products_info_to_discord
 from data_manager import DataManager
@@ -98,7 +98,7 @@ def transform_products(products):
 def filter_products_for_notification(products):
     return [
         product for product in products
-        if product['masterBrand'] not in filter_products_config['bannedBrandNames'] and product['isInStock']
+        if product['masterBrand'] not in FILTER_PRODUCTS_CONFIG['bannedBrandNames'] and product['isInStock']
     ]
 
 
