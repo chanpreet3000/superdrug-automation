@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4e32fa-9c63-4328-9cf4-90247c100659" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/index2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetcher.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -42,11 +43,13 @@
     &quot;Python.fetcher.executor&quot;: &quot;Run&quot;,
     &quot;Python.index.executor&quot;: &quot;Run&quot;,
     &quot;Python.index2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/chanp/OneDrive/Desktop/Freelance/superdrug-monitor&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chanp/OneDrive/Desktop/Freelance/promo-scraper&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,7 +68,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (superdrug-scraper)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -102,7 +104,12 @@
       <workItem from="1725701231664" duration="105000" />
       <workItem from="1725718670477" duration="176000" />
       <workItem from="1725799445402" duration="1323000" />
-      <workItem from="1725808697791" duration="3736000" />
+      <workItem from="1725808697791" duration="4168000" />
+      <workItem from="1725813996900" duration="319000" />
+      <workItem from="1725816126599" duration="20000" />
+      <workItem from="1725859743094" duration="19000" />
+      <workItem from="1726049093507" duration="30000" />
+      <workItem from="1726241721299" duration="422000" />
     </task>
     <servers />
   </component>

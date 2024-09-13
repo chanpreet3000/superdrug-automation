@@ -38,8 +38,8 @@ if __name__ == "__main__":
     # Add cron jobs
     # scheduler.add_job(startBot, 'cron', minute='*/2', timezone='GMT')
     scheduler.add_job(startBot, 'cron', hour='1', timezone='GMT')
-    scheduler.add_job(startBot, 'cron', hour='10', timezone='GMT')
-    scheduler.add_job(startBot, 'cron', hour='17', timezone='GMT')
+    scheduler.add_job(startBot, 'cron', hour='9', timezone='GMT')
+    scheduler.add_job(startBot, 'cron', hour='16', timezone='GMT')
 
     # Run startBot immediately when the script starts
     scheduler.add_job(startBot)
